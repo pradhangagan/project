@@ -16,4 +16,4 @@ results.print()
 results.save()  # or .show()
 
 results.xyxy[0]  # img1 predictions (tensor)
-results.pandas().xyxy[0]  # img1 predictions (pandas)
+results.pandas().xyxy[0]  # img1 predictions (pandas) 
