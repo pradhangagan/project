@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Upload Image for Object Detection</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <input type="submit" value="Upload">
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+ 
+    {% if detected_objects %}
+        <h2>Detected Objects:</h2>
+        <ul>
+            {% for object in detected_objects %}
+                <li>{{ object }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if num_detections %}
+        <h2>Number of Detected Objects:</h2>
+        <p>{{ num_detections }}</p>
+    {% endif %}
+
+</body>
+</html>
